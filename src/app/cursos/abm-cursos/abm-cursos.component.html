@@ -1,1 +1,13 @@
-<p>abm-cursos works!</p>
+<form [formGroup]="cursoForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre del Curso</mat-label>
+    <input matInput formControlName="nombre" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Duración</mat-label>
+    <input matInput formControlName="duracion" required>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="cursoForm.invalid">Guardar</button>
+</form>
