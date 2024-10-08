@@ -1,1 +1,14 @@
-<p>abm-inscripciones works!</p>
+<form [formGroup]="inscripcionForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Alumno</mat-label>
+    <input matInput formControlName="alumno" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Curso/s</mat-label>
+    <input matInput formControlName="curso" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha</mat-label>
+    <input matInput formControlName="
