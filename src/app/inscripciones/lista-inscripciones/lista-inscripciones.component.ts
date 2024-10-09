@@ -28,4 +28,7 @@ export class ListaInscripcionesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  eliminarInscripcion(id: number) {
+    this.inscripciones = this.inscripciones.filter(i => i.id !== id);
+  }
 }
