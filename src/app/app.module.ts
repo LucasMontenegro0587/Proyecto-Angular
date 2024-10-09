@@ -8,6 +8,7 @@ import { ListaCursosComponent } from './cursos/lista-cursos/lista-cursos.compone
 import { AbmCursosComponent } from './cursos/abm-cursos/abm-cursos.component';
 import { ListaInscripcionesComponent } from './inscripciones/lista-inscripciones/lista-inscripciones.component';
 import { NombreCompletoPipe } from './pipes/nombre-completo.pipe';
+import { TamanioLetraDirective } from './directives/tamanio-letra.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NombreCompletoPipe } from './pipes/nombre-completo.pipe';
     AbmCursosComponent,
     ListaInscripcionesComponent,
     NombreCompletoPipe,
+    TamanioLetraDirective,
   ],
   imports: [
     BrowserModule,
