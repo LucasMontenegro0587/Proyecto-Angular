@@ -19,9 +19,9 @@ export class ListaCursosComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'nombre', 'descripcion', 'duracion', 'editar', 'eliminar'];
   cursos: Curso[] = [
-    { id: 1, nombre: 'Desarrollo Web', descripcion: 'Curso completo', duracion : '60 horas', },
-    { id: 2, nombre: 'JavaScript', descripcion: 'Curso completo', duracion: '45 horas', },
-    { id: 3, nombre: 'Angular', descripcion: 'Curso completo', duracion: '50 horas', },
+    { id: 1, nombre: 'Desarrollo Web', descripcion: 'Curso completo', duracion : '60 horas' },
+    { id: 2, nombre: 'JavaScript', descripcion: 'Curso completo', duracion: '45 horas' },
+    { id: 3, nombre: 'Angular', descripcion: 'Curso completo', duracion: '50 horas' },
     { id: 3, nombre: 'CoffeeScript', descripcion: 'Curso intermedio', duracion: '40 horas' },
     { id: 3, nombre: 'Nuxt.Js', descripcion: 'Curso inicial', duracion: '25 horas' },
   ];
