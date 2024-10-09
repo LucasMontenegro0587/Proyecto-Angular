@@ -5,22 +5,36 @@
     <td mat-cell *matCellDef="let alumno"> {{alumno.id}} </td>
   </ng-container>
 
-  <!-- Nombre/s -->
+  <!-- Nombre -->
   <ng-container matColumnDef="nombre">
     <th mat-header-cell *matHeaderCellDef> Nombre </th>
     <td mat-cell *matCellDef="let alumno"> {{alumno.nombre}} </td>
   </ng-container>
 
-  <!-- Apellido/s -->
+  <!-- Apellido -->
   <ng-container matColumnDef="apellido">
     <th mat-header-cell *matHeaderCellDef> Apellido </th>
     <td mat-cell *matCellDef="let alumno"> {{alumno.apellido}} </td>
   </ng-container>
 
-  <!-- Curso/s -->
-  <ng-container matColumnDef="curso">
-    <th mat-header-cell *matHeaderCellDef> Curso </th>
-    <td mat-cell *matCellDef="let alumno"> {{alumno.curso}} </td>
+  <!-- Editar -->
+  <ng-container matColumnDef="editar">
+    <th mat-header-cell *matHeaderCellDef> Editar </th>
+    <td mat-cell *matCellDef="let alumno">
+      <button mat-icon-button color="primary" (click)="editarAlumno(alumno)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <!-- Eliminar -->
+  <ng-container matColumnDef="eliminar">
+    <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+    <td mat-cell *matCellDef="let alumno">
+      <button mat-icon-button color="warn" (click)="eliminarAlumno(alumno.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

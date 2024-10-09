@@ -24,9 +24,18 @@ export class ListaAlumnosComponent implements OnInit {
 
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  editarAlumno(alumno: Alumno) {
+    // El componente de ABM navega, pasando los datos del alumno
+    this.router.navigate(['/abm-alumnos', alumno.id]);
+  }
+
+  eliminarAlumno(id: number) {
+    // Debería agregar la lógica para eliminar el alumno
+    this.alumnos = this.alumnos.filter(a => a.id !== id);
+  }
 }
