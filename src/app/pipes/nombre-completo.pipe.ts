@@ -1,13 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'nombreCompleto',
-  standalone: true
+  name: 'nombreCompleto'
 })
 export class NombreCompletoPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(alumno: { nombre: string, apellido: string }): string {
+    return `${alumno.nombre} ${alumno.apellido}`;
   }
 
 }

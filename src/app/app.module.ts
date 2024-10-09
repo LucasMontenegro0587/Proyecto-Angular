@@ -7,6 +7,7 @@ import { AbmAlumnosComponent } from './alumnos/abm-alumnos/abm-alumnos.component
 import { ListaCursosComponent } from './cursos/lista-cursos/lista-cursos.component';
 import { AbmCursosComponent } from './cursos/abm-cursos/abm-cursos.component';
 import { ListaInscripcionesComponent } from './inscripciones/lista-inscripciones/lista-inscripciones.component';
+import { NombreCompletoPipe } from './pipes/nombre-completo.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ListaInscripcionesComponent } from './inscripciones/lista-inscripciones
     ListaCursosComponent,
     AbmCursosComponent,
     ListaInscripcionesComponent,
+    NombreCompletoPipe,
   ],
   imports: [
     BrowserModule,
