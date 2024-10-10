@@ -6,17 +6,51 @@
   <base href="https://lucasmontenegro0587.github.io/Proyecto-Angular/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Estilos globales de la aplicación -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="mat-typography">
+  <!-- Contenedor principal de la aplicación -->
   <app-root></app-root>
   
+  <!-- Sección de Cursos -->
+  <div class="container my-5">
+    <h2>Cursos Disponibles en la Academia</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Curso de Angular</h5>
+            <p class="card-text">Aprende a desarrollar aplicaciones web modernas utilizando Angular, un framework de desarrollo de aplicaciones front-end. Este curso abarca desde la creación de componentes hasta la gestión de servicios y rutas.</p>
+            <p class="card-text"><strong>Carga Horaria:</strong> 60 horas</p>
+            <p class="card-text"><strong>Objetivos:</strong> Dominar la creación de aplicaciones escalables y mantener un código limpio y estructurado.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Curso de JavaScript</h5>
+            <p class="card-text">Domina JavaScript, el lenguaje de programación fundamental para el desarrollo web. Este curso te enseñará desde los conceptos básicos hasta las técnicas avanzadas, incluyendo ES6 y más allá.</p>
+            <p class="card-text"><strong>Carga Horaria:</strong> 50 horas</p>
+            <p class="card-text"><strong>Objetivos:</strong> Aprender a implementar lógica en el navegador, manipular el DOM y trabajar con APIs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Podría agregar elementos estáticos -->
   <footer class="footer">
     <p>&copy; 2024 Academia Pentahouse. Todos los derechos reservados.</p>
     <p><a href="/contact">Contactanos</a> | <a href="/about">Acerca de</a></p>
   </footer>
+
+  <!-- Podría agregar scripts -->
 </body>
 </html>
+
+<button class="boton">Hover me</button>
