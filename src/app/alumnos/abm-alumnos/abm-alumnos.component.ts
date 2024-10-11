@@ -16,13 +16,7 @@ export interface Alumno {
 export class AbmAlumnosComponent implements OnInit {
 
   alumnoForm: FormGroup;
-  alumnos: Alumno[] = [
-    { id: 1, nombre: 'Lucas Leonel', apellido: 'Montenegro Burgos'},
-    { id: 2, nombre: 'Martín Emiliano', apellido: 'Bruno'},
-    { id: 3, nombre: 'Demetria Devonne', apellido: 'Lovato'},
-    { id: 4, nombre: 'Victoria', apellido: 'Pedretti'},
-    { id: 5, nombre: 'Chloe', apellido: 'Lewis'},
-  ];
+  alumnos: Alumno[] = [];
   alumnoId: number | null = null;
 
   constructor(private fb: FormBuilder, private route: ActivatedRoute) {
@@ -34,6 +28,23 @@ export class AbmAlumnosComponent implements OnInit {
 
   ngOnInit(): void {
     this.alumnoId = Number(this.route.snapshot.paramMap.get('id'));
+
+    // Carga de alumnos desde el localStorage
+    const storedAlumnos = localStorage.getItem('alumnos');
+    if (storedAlumnos) {
+      this.alumnos = JSON.parse(storedAlumnos);
+    } else {
+      // Si no hay alumnos en localStorage, se inicializa con algunos datos
+      this.alumnos = [
+        { id: 1, nombre: 'Lucas Leonel', apellido: 'Montenegro Burgos'},
+        { id: 2, nombre: 'Martín Emiliano', apellido: 'Bruno'},
+        { id: 3, nombre: 'Demetria Devonne', apellido: 'Lovato'},
+        { id: 4, nombre: 'Victoria', apellido: 'Pedretti'},
+        { id: 5, nombre: 'Chloe', apellido: 'Lewis'},
+      ];
+      localStorage.setItem('alumnos', JSON.stringify(this.alumnos));
+    }
+
     if (this.alumnoId) {
       this.cargarDatosAlumno(this.alumnoId);
     }
@@ -57,16 +68,32 @@ export class AbmAlumnosComponent implements OnInit {
         if (alumno) {
           alumno.nombre = this.alumnoForm.value.nombre;
           alumno.apellido = this.alumnoForm.value.apellido;
+          
+          // Actualizar alumnos en localStorage
+          localStorage.setItem('alumnos', JSON.stringify(this.alumnos));
+          
+          // Mensaje de éxito
+          alert('Alumno actualizado exitosamente');
         }
       } else {
         // Lógica para agregar un nuevo alumno/a
-        const newId = this.alumnos.length + 1;
+        const newId = this.alumnos.length > 0 ? this.alumnos[this.alumnos.length - 1].id + 1 : 1;
         this.alumnos.push({
           id: newId,
           nombre: this.alumnoForm.value.nombre,
           apellido: this.alumnoForm.value.apellido
         });
+
+        // Guardar nuevo alumno en el localStorage
+        localStorage.setItem('alumnos', JSON.stringify(this.alumnos));
+
+        // Mensaje de éxito
+        alert('Alumno agregado exitosamente');
       }
+
+      // Reiniciar el formulario y el alumnoId
+      this.alumnoForm.reset();
+      this.alumnoId = null;
     }
   }
 }

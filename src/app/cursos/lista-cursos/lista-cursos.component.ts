@@ -36,15 +36,27 @@ export class ListaCursosComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    // Cargar cursos desde localStorage
+    const storedCursos = localStorage.getItem('cursos');
+    if (storedCursos) {
+      this.cursos = JSON.parse(storedCursos);
+    }
   }
 
-// Función para editar un curso por ID
-editarCurso(curso: Curso) {
-  this.router.navigate(['/abm-cursos', curso.id]);
-}
+  // Función para editar un curso por ID
+  editarCurso(curso: Curso) {
+    this.router.navigate(['/abm-cursos', curso.id]);
+  }
 
-// Función para eliminar un curso por ID
-eliminarCurso(id: number) {
-  this.cursos = this.cursos.filter(c => c.id !== id);
-}
+  // Función para eliminar un curso por ID
+  eliminarCurso(id: number) {
+    // Eliminar el curso de la lista
+    this.cursos = this.cursos.filter(c => c.id !== id);
+
+    // Actualizar localStorage después de eliminar
+    localStorage.setItem('cursos', JSON.stringify(this.cursos));
+
+    // Mostrar mensaje de confirmación (opcional)
+    alert('Curso eliminado exitosamente');
+  }
 }
