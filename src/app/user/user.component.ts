@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlumnosService } from '../services/alumnos.service';
 import { CursosService } from '../services/cursos.service';
+import { InscripcionesService } from '../services/inscripciones.service';
 
 @Component({
   selector: 'app-user',
@@ -12,7 +13,11 @@ export class UserComponent implements OnInit {
   alumnos: any[] = [];
   cursos: any[] = [];
 
-  constructor(private alumnosService: AlumnosService, private cursosService: CursosService) {}
+  constructor(
+    private alumnosService: AlumnosService, 
+    private cursosService: CursosService,
+    private inscripcionesService: InscripcionesService,
+  ) {}
 
   ngOnInit(): void {
     this.alumnosService.getAlumnos().subscribe(data => {
@@ -23,12 +28,12 @@ export class UserComponent implements OnInit {
       this.cursos = data;
     });
   }
+
   inscribir(alumnoId: number, cursoId: number) {
-    this.inscripcionesService.inscribir(alumnoId, cursoId);
+    this.inscripcionesService.inscribir(alumnoId, cursoId); // Usar el servicio inyectado
   }
-  
+
   desinscribir(alumnoId: number, cursoId: number) {
-    this.inscripcionesService.desinscribir(alumnoId, cursoId);
+    this.inscripcionesService.desinscribir(alumnoId, cursoId); // Usar el servicio inyectado
   }
-  
 }

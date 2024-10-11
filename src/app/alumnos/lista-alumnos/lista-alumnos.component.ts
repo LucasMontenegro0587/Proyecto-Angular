@@ -30,7 +30,7 @@ export class ListaAlumnosComponent implements OnInit {
   }
 
   editarAlumno(alumno: Alumno) {
-    // El componente de ABM navega, pasando los datos del alumno
+    // El componente navega, pasando los datos del alumno
     this.router.navigate(['/abm-alumnos', alumno.id]);
   }
 

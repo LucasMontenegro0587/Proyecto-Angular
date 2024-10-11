@@ -29,13 +29,13 @@ import { TamanioLetraDirective } from './directives/tamanio-letra.directive';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, // Asegurarse de que el módulo esté importado
-    MatTableModule, // Importa MatTableModule
-    MatIconModule,  // Importa MatIconModule
-    MatButtonModule, // Importa MatButtonModule
-    ReactiveFormsModule, // Importa ReactiveFormsModule
-    MatFormFieldModule,  // Importa MatFormFieldModule
-    MatInputModule,      // Importa MatInputModule
+    AppRoutingModule, // Importado
+    MatTableModule, // Importado
+    MatIconModule,  // Importado
+    MatButtonModule, // Importado
+    ReactiveFormsModule, // Importado
+    MatFormFieldModule,  // Importado
+    MatInputModule,      // Importado
   ],
   providers: [],
   bootstrap: [AppComponent]
