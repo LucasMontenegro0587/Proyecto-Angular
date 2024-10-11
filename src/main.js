@@ -1,16 +1,16 @@
-// Función para iniciar sesión
 function iniciarSesion() {
-  // Pedir nombre de usuario y contraseña
-  const nombreUsuario = prompt("Por favor, ingrese su nombre de usuario:");
-  const contrasenia = prompt("Por favor, ingrese su contraseña:");
+    // Pedir nombre de usuario y contraseña
+    const nombreUsuario = prompt("Por favor, ingrese su nombre de usuario:");
+    const contrasenia = prompt("Por favor, ingrese su contraseña:");
 
   // Verificamos que los campos no estén vacíos
   if (nombreUsuario && contrasenia) {
-    alert(`Sesión iniciada, bienvenido/a ${nombreUsuario}`);
-  } else {
-    alert("No se pudo iniciar sesión. Por favor, complete todos los campos.");
-  }
-}
+      alert(`Sesión iniciada, bienvenido/a ${nombreUsuario}`);
+    } else {
+      alert("No se pudo iniciar sesión. Por favor, complete todos los campos.");
+    }
+  }   
+  alert('Se debe implementar mejora!')
 
 // Función para cerrar sesión
 function cerrarSesion() {
