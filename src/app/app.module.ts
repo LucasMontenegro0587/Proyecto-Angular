@@ -18,26 +18,26 @@ import { TamanioLetraDirective } from './directives/tamanio-letra.directive';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ListaAlumnosComponent,
     AbmAlumnosComponent,
-    ListaCursosComponent,
     AbmCursosComponent,
     ListaInscripcionesComponent,
     NombreCompletoPipe,
-    TamanioLetraDirective,
   ],
   imports: [
+    AppComponent,
     BrowserModule,
     AppRoutingModule, // Importado
+    ListaAlumnosComponent, // Importado
+    ListaCursosComponent, // Importado
     MatTableModule, // Importado
     MatIconModule,  // Importado
     MatButtonModule, // Importado
     ReactiveFormsModule, // Importado
     MatFormFieldModule,  // Importado
     MatInputModule,      // Importado
+    TamanioLetraDirective, // Importado
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }

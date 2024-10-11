@@ -2,55 +2,150 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>SGC-P - Sistema de Gestión de Cursos</title>
+  <title>Sistema de Gestión de Cursos</title>
   <base href="https://lucasmontenegro0587.github.io/Proyecto-Angular/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <!-- Estilos globales de la aplicación -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="mat-typography">
-  <!-- Contenedor principal de la aplicación -->
-  <app-root></app-root>
-  
-  <!-- Sección de Cursos -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Academia Pentahouse</span>
+      <button class="btn btn-primary" onclick="iniciarSesion()">Iniciar sesión</button>
+      <button class="btn btn-secondary" onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+  </nav>
   <div class="container my-5">
-    <h2>Cursos Disponibles en la Academia</h2>
+    <h2>Cursos disponibles</h2>
     <div class="row">
       <div class="col-md-6">
         <div class="card mb-4">
           <div class="card-body">
-            <h5 class="card-title">Curso de Angular</h5>
-            <p class="card-text">Aprende a desarrollar aplicaciones web modernas utilizando Angular, un framework de desarrollo de aplicaciones front-end. Este curso abarca desde la creación de componentes hasta la gestión de servicios y rutas.</p>
+            <h5 class="card-title">Maquetación Web</h5>
+            <p class="card-text">Conviértete en un desarrollador web completo aprendiendo HTML, CSS, JavaScript y más. Este curso abarca desde la estructura básica hasta la creación de sitios interactivos y responsivos.</p>
             <p class="card-text"><strong>Carga Horaria:</strong> 60 horas</p>
-            <p class="card-text"><strong>Objetivos:</strong> Dominar la creación de aplicaciones escalables y mantener un código limpio y estructurado.</p>
+            <p class="card-text"><strong>Objetivos:</strong> Crear sitios web completos y modernos, optimizados para cualquier dispositivo.</p>
+            <p><strong>Niveles:</strong></p>
+            <ul>
+              <li><strong>Básico:</strong> Introducción a la creación de sitios web usando HTML y CSS.</li>
+              <li><strong>Completo:</strong> Creación de sitios web responsivos con interactividad avanzada utilizando JavaScript.</li>
+            </ul>
+            <button class="btn btn-success">Inscribirse</button>
           </div>
         </div>
       </div>
       <div class="col-md-6">
         <div class="card mb-4">
           <div class="card-body">
-            <h5 class="card-title">Curso de JavaScript</h5>
+            <h5 class="card-title">JavaScript</h5>
             <p class="card-text">Domina JavaScript, el lenguaje de programación fundamental para el desarrollo web. Este curso te enseñará desde los conceptos básicos hasta las técnicas avanzadas, incluyendo ES6 y más allá.</p>
             <p class="card-text"><strong>Carga Horaria:</strong> 50 horas</p>
-            <p class="card-text"><strong>Objetivos:</strong> Aprender a implementar lógica en el navegador, manipular el DOM y trabajar con APIs.</p>
+            <p class="card-text"><strong>Objetivos:</strong> Implementar lógica en el navegador, manipular el DOM y trabajar con APIs.</p>
+            <p><strong>Niveles:</strong></p>
+            <ul>
+              <li><strong>Básico:</strong> Fundamentos de JavaScript y manipulación básica del DOM.</li>
+              <li><strong>Completo:</strong> Trabajar con APIs y desarrollar aplicaciones más interactivas.</li>
+            </ul>
+            <button class="btn btn-success">Inscribirse</button>
           </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Angular</h5>
+            <p class="card-text">Aprende a desarrollar aplicaciones web modernas utilizando Angular, un framework de desarrollo de aplicaciones front-end.</p>
+            <p class="card-text"><strong>Carga Horaria:</strong> 60 horas</p>
+            <p class="card-text"><strong>Objetivos:</strong> Dominar la creación de aplicaciones escalables y mantener un código limpio y estructurado.</p>
+            <p><strong>Niveles:</strong></p>
+            <ul>
+              <li><strong>Básico:</strong> Fundamentos del framework y creación de componentes básicos.</li>
+              <li><strong>Completo:</strong> Integración de servicios y manejo avanzado de rutas y estados.</li>
+            </ul>
+            <button class="btn btn-success">Inscribirse</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">CoffeeScript</h5>
+            <p class="card-text">Descubre CoffeeScript, un lenguaje que compila en JavaScript pero ofrece una sintaxis más limpia y sencilla.</p>
+            <p class="card-text"><strong>Carga Horaria:</strong> 40 horas</p>
+            <p class="card-text"><strong>Objetivos:</strong> Mejorar el flujo de trabajo y escribir código más conciso y legible.</p>
+            <p><strong>Niveles:</strong></p>
+            <ul>
+              <li><strong>Básico:</strong> Introducción a la sintaxis y características de CoffeeScript.</li>
+              <li><strong>Completo:</strong> Aplicar CoffeeScript en proyectos reales y más complejos.</li>
+            </ul>
+            <button class="btn btn-success">Inscribirse</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Nuxt.Js</h5>
+            <p class="card-text">Inicia en el desarrollo con Nuxt.js, un framework basado en Vue.js para la creación de aplicaciones web universales y sitios estáticos.</p>
+            <p class="card-text"><strong>Carga Horaria:</strong> 25 horas</p>
+            <p class="card-text"><strong>Objetivos:</strong> Aprender a desarrollar sitios web con server-side rendering y mejorar la experiencia del usuario.</p>
+            <p><strong>Niveles:</strong></p>
+            <ul>
+              <li><strong>Básico:</strong> Fundamentos del framework Nuxt.js y configuración inicial.</li>
+              <li><strong>Completo:</strong> Desarrollo de aplicaciones universales con server-side rendering.</li>
+            </ul>
+            <button class="btn btn-success">Inscribirse</button>
+          </div>
+        </div>
+      </div>
+<div class="container mt-5">
+  <h2 class="text-center">Cursos exclusivos</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Kitsunia</h5>
+          <p class="card-text">Explora Kitsunia, un entorno avanzado para el diseño frontend interactivo, optimizado para crear interfaces inmersivas.</p>
+          <p class="card-text"><strong>Carga Horaria:</strong> 30 horas</p>
+          <p class="card-text"><strong>Objetivos:</strong> Desarrollar sitios web altamente interactivos, centrados en la experiencia de usuario fluida y envolvente.</p>
+          <p><strong>Niveles:</strong></p>
+          <ul>
+            <li><strong>Básico:</strong> Creación de interfaces sencillas.</li>
+            <li><strong>Completo:</strong> Desarrollo de experiencias complejas con animaciones y optimización avanzada.</li>
+          </ul>
+          <button class="btn btn-success">Inscribirse</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Valquirium</h5>
+          <p class="card-text">Sumérgete en Valquirium, una herramienta innovadora para construir plataformas de front-end avanzadas con una eficiencia sin precedentes.</p>
+          <p class="card-text"><strong>Carga Horaria:</strong> 35 horas</p>
+          <p class="card-text"><strong>Objetivos:</strong> Dominar la creación de aplicaciones web dinámicas y ágiles con patrones de diseño de última generación.</p>
+          <p><strong>Niveles:</strong></p>
+          <ul>
+            <li><strong>Básico:</strong> Implementación de componentes y diseño responsive.</li>
+            <li><strong>Completo:</strong> Optimización de rendimiento y experiencias web interactivas complejas.</li>
+          </ul>
+          <button class="btn btn-success">Inscribirse</button>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Podría agregar elementos estáticos -->
-  <footer class="footer">
-    <p>&copy; 2024 Academia Pentahouse. Todos los derechos reservados.</p>
-    <p><a href="/contact">Contactanos</a> | <a href="/about">Acerca de</a></p>
-  </footer>
-
-  <!-- Podría agregar scripts -->
+</div>
+  <script> // Debo incorporar un .html para el usuario y administrador
+    function iniciarSesion() {
+      alert('¡MEJORAR!');
+    }
+    function cerrarSesion() {
+      alert('¡MEJORAR!');
+    }
+  </script>
 </body>
 </html>
-
-<button class="boton">Hover me</button>
