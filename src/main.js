@@ -6,6 +6,6 @@ function cerrarSesion() {
   alert('Se debe implementar mejora!');
 }
 
-function inscribirse(curso) {
-  alert(`Te has inscrito en el curso: ${curso}`);
+function inscribirse() {
+  alert(`Te has inscripto exitosamente`);
 }
