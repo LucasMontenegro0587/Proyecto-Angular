@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-  <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -19,8 +19,7 @@
         Academia Pentahouse
       </span>
       <div>
-        <button class="btn btn-primary btn-session" onclick="soyAdministrador()">Administrador</button>
-        <button class="btn btn-secondary btn-session" onclick="soyAlumno()">Alumno/a</button>
+        <button class="btn btn-primary btn-session" onclick="iniciarSesion()">Ingresar</button>
       </div>
     </div>
   </nav>
@@ -108,6 +107,55 @@
           </div>
         </div>
       </div>
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">C++</h5>
+            <p class="card-text">Domina uno de los lenguajes más potentes para el desarrollo de software de alto rendimiento. C++ es fundamental para sistemas, videojuegos y aplicaciones de misión crítica.</p>
+            <p class="card-text"><strong>Carga Horaria:</strong> 80 horas</p>
+            <p class="card-text"><strong>Objetivos:</strong> Crear aplicaciones eficientes y de alto rendimiento.</p>
+            <p><strong>Niveles:</strong></p>
+            <ul>
+              <li><strong>Básico:</strong> Fundamentos de C++, estructuras de control, y manejo de memoria.</li>
+              <li><strong>Completo:</strong> Programación avanzada con punteros, herencia y manejo de excepciones.</li>
+            </ul>
+            <button class="btn btn-success" onclick="inscribirse('C++')">Inscribirse</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Django</h5>
+            <p class="card-text">Desarrolla aplicaciones web robustas y seguras usando Django, uno de los frameworks más populares de Python. Aprende a crear sitios web rápidamente con funciones avanzadas.</p>
+            <p class="card-text"><strong>Carga Horaria:</strong> 70 horas</p>
+            <p class="card-text"><strong>Objetivos:</strong> Desarrollar aplicaciones web completas usando Django y Python.</p>
+            <p><strong>Niveles:</strong></p>
+            <ul>
+              <li><strong>Básico:</strong> Fundamentos del framework, creación de vistas y plantillas.</li>
+              <li><strong>Completo:</strong> Integración de bases de datos, autenticación y despliegue en servidores.</li>
+            </ul>
+            <button class="btn btn-success" onclick="inscribirse('Django')">Inscribirse</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Tailwind CSS</h5>
+            <p class="card-text">Aprende a diseñar interfaces modernas y eficientes usando Tailwind CSS, un framework de CSS basado en utilidades. Ideal para construir rápidamente sitios web bonitos y funcionales.</p>
+            <p class="card-text"><strong>Carga Horaria:</strong> 30 horas</p>
+            <p class="card-text"><strong>Objetivos:</strong> Crear sitios web estilizados y totalmente personalizables usando clases de utilidad.</p>
+            <p><strong>Niveles:</strong></p>
+            <ul>
+              <li><strong>Básico:</strong> Fundamentos de Tailwind CSS y su estructura de clases.</li>
+              <li><strong>Completo:</strong> Personalización avanzada, creación de temas y optimización de rendimiento.</li>
+            </ul>
+            <button class="btn btn-success" onclick="inscribirse('Tailwind CSS')">Inscribirse</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="container mt-5">
     <h2 class="text-center">Cursos exclusivos</h2>
