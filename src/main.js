@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+
 function iniciarSesion() {
     // Pedir nombre de usuario y contraseña
     const nombreUsuario = prompt("Por favor, ingresá tu nombre de usuario:");
