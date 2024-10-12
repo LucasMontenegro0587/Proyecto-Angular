@@ -36,14 +36,14 @@ function inscribirse(curso) {
       Swal.fire(
         '¡La inscripción fué exitosa!',
         `Estás inscripto en el curso: ${curso}`,
-        'Vacante ocupada'
+        'Success'
       );
     } else {
       // Si el usuario cancela, se muestra el mensaje de cancelación
       Swal.fire(
         'Inscripción cancelada',
         `No estás inscripto en el curso: ${curso}`,
-        'Vacante liberada'
+        'Error'
       );
     }
   });
