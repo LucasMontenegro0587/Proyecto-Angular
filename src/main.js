@@ -25,8 +25,10 @@ function cerrarSesion() {
 function inscribirse(curso) {
   // Preguntamos si desea inscribirse al curso
   const deseaInscribirse = confirm(`¿Deseás inscribirte en el curso: ${curso}?`);
-  
+
   if (deseaInscribirse) {
     alert(`Inscripción exitosa al curso: ${curso}`);
+  } else {
+    alert(`Se canceló la inscripción al curso: ${curso}`);
   }
 }
