@@ -1,27 +1,32 @@
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 
-function iniciarSesion() {
+// Función del Administrador
+function soyAdministrador() {
     // Pedir nombre de usuario y contraseña
     const nombreUsuario = prompt("Por favor, ingresá tu nombre de usuario:");
     const contrasenia = prompt("Por favor, ingresá tu contraseña:");
 
-  // Verificamos que los campos no estén vacíos
+  // Se verifican que los campos no estén vacíos
   if (nombreUsuario && contrasenia) {
-      alert(`Sesión iniciada, bienvenido/a ${nombreUsuario}`);
+      alert(`Sesión iniciada, bienvenido/a ${soyAdministrador}`);
     } else {
       alert("No se pudo iniciar sesión. Por favor, completá los campos solicitados.");
     }
   }   
 
-// Función para cerrar sesión
-function cerrarSesion() {
-  // Confirmación del cierre de sesión
-  const deseaCerrar = confirm("¿Querés cerrar sesión?");
-  
-  if (deseaCerrar) {
-    alert("Sesión cerrada con éxito");
-  }
-}
+// Función del alumno/a
+function soyAlumno() {
+    // Pedir nombre de usuario y contraseña
+    const nombreUsuario = prompt("Por favor, ingresá tu nombre de usuario:");
+    const contrasenia = prompt("Por favor, ingresá tu contraseña:");
+
+  // Se verifican que los campos no estén vacíos
+  if (nombreUsuario && contrasenia) {
+      alert(`Sesión iniciada, bienvenido/a ${soyAlumno}`);
+    } else {
+      alert("No se pudo iniciar sesión. Por favor, completá los campos solicitados.");
+    }
+  }   
 
 // Función para inscribirse a un curso usando SweetAlert
 function inscribirse(curso) {
