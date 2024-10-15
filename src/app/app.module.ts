@@ -9,38 +9,29 @@ import { MatButtonModule } from '@angular/material/button'; // Módulo de botone
 import { ReactiveFormsModule } from '@angular/forms'; // Módulo de formularios reactivos
 import { MatFormFieldModule } from '@angular/material/form-field'; // Módulo de campos de formulario
 import { MatInputModule } from '@angular/material/input'; // Módulo de inputs
-import { ListaAlumnosComponent } from './alumnos/lista-alumnos/lista-alumnos.component';
-import { AbmAlumnosComponent } from './alumnos/abm-alumnos/abm-alumnos.component';
-import { AbmInscripcionesComponent } from './abm-inscripciones/abm-inscripciones.component.ts';
-import { ListaCursosComponent } from './cursos/lista-cursos/lista-cursos.component';
-import { AbmCursosComponent } from './cursos/abm-cursos/abm-cursos.component';
-import { ListaInscripcionesComponent } from './inscripciones/lista-inscripciones/lista-inscripciones.component';
-import { NombreCompletoPipe } from './pipes/nombre-completo.pipe';
-import { TamanioLetraDirective } from './directives/tamanio-letra.directive';
-
+import { studentsComponent } from './dashboard/students/students.component';
+import { studentsManager } from './dashboard/students/create-edit-students/create-edit-students.component';
+import { titleSizeDirective } from './shared/directives/title-size.directive';
+import { studentsFullName } from './shared/pipes/student-full-name.pipe'; 
 
 @NgModule({
   declarations: [
-    AbmAlumnosComponent,
-    AbmCursosComponent,
-    AbmInscripcionesComponent,
-    ListaAlumnosComponent,
-    ListaInscripcionesComponent,
-    NombreCompletoPipe,
+    studentsComponent, // Declarado
+    studentsFullName, // Declarado
+    studentsManager, // Declarado
   ],
   imports: [
     AppComponent,
+    AppRoutingModule, // Importado
     BrowserAnimationsModule, // Material Design
     BrowserModule,
-    AppRoutingModule, // Importado
-    ListaCursosComponent, // Importado
     MatTableModule, // Importado
     MatIconModule,  // Importado
     MatButtonModule, // Importado
     ReactiveFormsModule, // Importado
     MatFormFieldModule,  // Importado
     MatInputModule,      // Importado
-    TamanioLetraDirective, // Importado
+    titleSizeDirective, // Declarado
   ],
   providers: [],
   bootstrap: []

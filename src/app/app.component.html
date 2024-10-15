@@ -1,15 +1,15 @@
 <mat-toolbar color="primary">
-  <span class="navbar-brand">Gestión de Alumnos y Cursos</span>
+  <span class="navbar-brand">Gestor del Alumnado (GedeA)</span>
 </mat-toolbar>
 
 <div class="container-fluid mt-3">
   <div class="row">
     <div class="col-md-12">
       <div class="content-area">
-        <router-outlet>
-          <button mat-button routerLink="/alumnos" routerLinkActive="active">Alumnos</button>
-          <button mat-button routerLink="/cursos" routerLinkActive="active">Cursos</button>
-          <button mat-button routerLink="/inscripciones" routerLinkActive="active">Inscripciones</button>        
+        <router-outlet> <!-- Debo mejorar ésto, además, desde index.html se debe redirir acá para los alumnos -->
+          <button mat-button routerLink="/profile" routerLinkActive="active">Perfil</button>
+          <button mat-button routerLink="/courses" routerLinkActive="active">Cursos</button>
+          <button mat-button routerLink="/inscriptions" routerLinkActive="active">Inscripciones</button>        
         </router-outlet>
       </div>
     </div>

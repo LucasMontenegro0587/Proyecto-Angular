@@ -1,34 +1,19 @@
-import { Component, NgModule, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterModule, Routes } from '@angular/router';
-import { ListaAlumnosComponent } from './alumnos/lista-alumnos/lista-alumnos.component';
-import { AbmAlumnosComponent } from './alumnos/abm-alumnos/abm-alumnos.component';
-import { ListaCursosComponent } from './cursos/lista-cursos/lista-cursos.component';
-import { AbmCursosComponent } from './cursos/abm-cursos/abm-cursos.component';
-import { ListaInscripcionesComponent } from './inscripciones/lista-inscripciones/lista-inscripciones.component';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Alumno } from './dashboard/students/create-edit-students/create-edit-students.component';
+import { ActivatedRoute } from '@angular/router';
 
-const routes: Routes = [
-  { path: 'alumnos', component: ListaAlumnosComponent },
-  { path: 'alumnos/abm', component: AbmAlumnosComponent },
-  { path: 'cursos', component: ListaCursosComponent },
-  { path: 'cursos/abm', component: AbmCursosComponent },
-  { path: 'inscripciones', component: ListaInscripcionesComponent },
-  { path: '', redirectTo: '/alumnos', pathMatch: 'full' },
-];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export interface Alumno {
+  id: number;
+  nombre: string;
+  apellido: string;
+}
 
 @Component({
-  selector: 'app-abm-alumnos',
-  templateUrl: './abm-alumnos.component.html',
-  styleUrls: ['./abm-alumnos.component.scss']
+  selector: 'app-create-edit-students',
+  templateUrl: './create-edit-students.component.html',
+  styleUrls: ['./create-edit-students.component.scss']
 })
-export class AbmAlumnosComponent implements OnInit {
+export class studentsManager implements OnInit {
 
   alumnoForm: FormGroup;
   alumnos: Alumno[] = [];
@@ -51,11 +36,11 @@ export class AbmAlumnosComponent implements OnInit {
     } else {
       // Si no hay alumnos en localStorage, se inicializa con algunos datos
       this.alumnos = [
-        { id: 1, nombre: 'Lucas Leonel', apellido: 'Montenegro Burgos' },
-        { id: 2, nombre: 'Martín Emiliano', apellido: 'Bruno' },
-        { id: 3, nombre: 'Demetria Devonne', apellido: 'Lovato' },
-        { id: 4, nombre: 'Victoria', apellido: 'Pedretti' },
-        { id: 5, nombre: 'Chloe', apellido: 'Lewis' },
+        { id: 1, nombre: 'Lucas Leonel', apellido: 'Montenegro Burgos'},
+        { id: 2, nombre: 'Martín Emiliano', apellido: 'Bruno'},
+        { id: 3, nombre: 'Demetria Devonne', apellido: 'Lovato'},
+        { id: 4, nombre: 'Victoria', apellido: 'Pedretti'},
+        { id: 5, nombre: 'Chloe', apellido: 'Lewis'},
       ];
       localStorage.setItem('alumnos', JSON.stringify(this.alumnos));
     }
@@ -83,10 +68,10 @@ export class AbmAlumnosComponent implements OnInit {
         if (alumno) {
           alumno.nombre = this.alumnoForm.value.nombre;
           alumno.apellido = this.alumnoForm.value.apellido;
-
+          
           // Actualizar alumnos en localStorage
           localStorage.setItem('alumnos', JSON.stringify(this.alumnos));
-
+          
           // Mensaje de éxito
           alert('Alumno actualizado exitosamente');
         }
