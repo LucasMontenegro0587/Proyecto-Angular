@@ -43,12 +43,6 @@ body {
   text-align: justify; /* Justificar texto para un aspecto más formal */
 }
 
-.small-img {
-  width: auto;
-  height: auto;
-  border-radius: 5px; /* Agrega un pequeño redondeo a las esquinas de la imagen */
-}
-
 @media (min-width: 768px) {
   .fixed-height-card {
       max-width: 200px; /* Aumenta el tamaño de las cards en pantallas medianas */
