@@ -49,28 +49,15 @@ body {
   border-radius: 5px; /* Agrega un pequeño redondeo a las esquinas de la imagen */
 }
 
-.fixed-height-card .card-body {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 2;
-  height: 50px;
-  width: 50px;
-  justify-content: space-between;
-  margin: auto auto; /* Centra las cards horizontalmente y agrega un espacio entre ellas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para darle relieve */
-  border-radius: 10px; /* Redondea las esquinas de la card */
-  padding: auto; /* Añade un poco de espacio interno para el contenido */
-}
-
 @media (min-width: 768px) {
   .fixed-height-card {
-      max-width: 400px; /* Aumenta el tamaño de las cards en pantallas medianas */
+      max-width: 200px; /* Aumenta el tamaño de las cards en pantallas medianas */
   }
 }
 
 @media (min-width: 1024px) {
   .fixed-height-card {
-      max-width: 500px; /* Aumenta aún más el tamaño de las cards en pantallas grandes */
+      max-width: 250px; /* Aumenta aún más el tamaño de las cards en pantallas grandes */
   }
 }
 
