@@ -4,16 +4,51 @@
 html, body { 
   height: 50%; /* Ajusta el valor de la altura */
   width: 50%; /* Ajusta el valor del ancho */
+  margin: 50%; 
 }
 
 body { 
-  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+.presentation-text {
+  font-size: 1.2rem;
+  color: #34495E; /* Un tono azul grisáceo para elegancia y mejor legibilidad */
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 400; /* Peso de fuente medio para una lectura suave */
+  max-width: 800px; /* Limita el ancho para mejorar la legibilidad en pantallas grandes */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pillar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2C3E50; /* Un tono azul oscuro para mayor elegancia */
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #3498DB; /* Línea decorativa debajo del título */
+  padding-bottom: 5px;
+}
+
+.pillar-description {
+  font-size: 1rem;
+  color: #555; /* Gris para mejor lectura */
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify; /* Justificar texto para un aspecto más formal */
 }
 
 .fixed-height-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 250px; /* Define un ancho máximo para las cards */
+  margin: auto auto; /* Centra las cards horizontalmente y agrega un espacio entre ellas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para darle relieve */
+  border-radius: 10px; /* Redondea las esquinas de la card */
 }
 
 .fixed-height-card .card-body {
@@ -21,4 +56,18 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 20px; /* Añade un poco de espacio interno para el contenido */
 }
+
+@media (min-width: 768px) {
+  .fixed-height-card {
+      max-width: 400px; /* Aumenta el tamaño de las cards en pantallas medianas */
+  }
+}
+
+@media (min-width: 1024px) {
+  .fixed-height-card {
+      max-width: 500px; /* Aumenta aún más el tamaño de las cards en pantallas grandes */
+  }
+}
+
