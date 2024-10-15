@@ -1,5 +1,19 @@
 /* Debo agregar estilos */
 @import '@sweetalert2/theme-dark/dark.scss';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+  height: 100%; 
+}
+
+body { 
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+.fixed-height-card {
+  height: 50%; /* Ajusta el valor de la altura */
+  width: 50%; /* Ajusta el valor del ancho */
+}
+
+.fixed-height-card .card-body {
+  overflow-y: auto; /* Agrega scroll si el contenido sobrepasa la altura */
+}
