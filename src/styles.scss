@@ -4,7 +4,7 @@
 html, body { 
   height: 50%; /* Ajusta el valor de la altura */
   width: 50%; /* Ajusta el valor del ancho */
-  margin: 78%; 
+  margin: 25%; 
 }
 
 body { 
@@ -44,27 +44,21 @@ body {
 }
 
 .small-img {
-  width: auto;
-  height: auto;
+  width: 50px;
+  height: 50px;
   border-radius: 5px; /* Agrega un pequeño redondeo a las esquinas de la imagen */
 }
 
-.fixed-height-card {
+.fixed-height-card .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-grow: 2;
   height: 50px;
-  width: 50px; /* Define un ancho máximo para las cards */
+  width: 50px;
+  justify-content: space-between;
   margin: auto auto; /* Centra las cards horizontalmente y agrega un espacio entre ellas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para darle relieve */
   border-radius: 10px; /* Redondea las esquinas de la card */
-}
-
-.fixed-height-card .card-body {
-  flex-grow: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   padding: auto; /* Añade un poco de espacio interno para el contenido */
 }
 
