@@ -10,10 +10,16 @@ body {
 }
 
 .fixed-height-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 50%; /* Ajusta el valor de la altura */
   width: 50%; /* Ajusta el valor del ancho */
 }
 
 .fixed-height-card .card-body {
-  overflow-y: auto; /* Agrega scroll si el contenido sobrepasa la altura */
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
