@@ -45,7 +45,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 250px; /* Define un ancho máximo para las cards */
+  height: 50px;
+  width: 50px; /* Define un ancho máximo para las cards */
   margin: auto auto; /* Centra las cards horizontalmente y agrega un espacio entre ellas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para darle relieve */
   border-radius: 10px; /* Redondea las esquinas de la card */
