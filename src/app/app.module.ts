@@ -12,7 +12,7 @@ import { MatTableModule } from '@angular/material/table'; // Módulo de tabla
 import { MatToolbarModule } from '@angular/material/toolbar'; // Módulo de toolbar
 import { ReactiveFormsModule } from '@angular/forms'; // Módulo de formularios reactivos
 import { StudentsComponent } from './dashboard/students/students.component';
-import { StudentsManager } from './dashboard/students/create-edit-students/create-edit-students.component';
+import { CreateEditStudents } from './dashboard/students/create-edit-students/create-edit-students.component';
 import { NavbarComponent } from './layout/navbar/navbar.component'; // Componente Navegación
 import { SidebarComponent } from './layout/sidebar/sidebar.component'; // Componente Barra laterial
 import { TopbarComponent } from './layout/topbar/topbar.component'; // Componente Barra superior
@@ -24,7 +24,7 @@ import { TitleSizeDirective } from './shared/directives/title-size.directive'; /
     AppComponent,
     StudentsComponent,
     StudentsFullName,
-    StudentsManager,
+    CreateEditStudents,
   ],
   imports: [ // Importaciones
     AppRoutingModule,
