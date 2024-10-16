@@ -8,7 +8,7 @@
   <!-- Nombre Completo -->
   <ng-container matColumnDef="nombreCompleto">
     <th mat-header-cell *matHeaderCellDef> Nombre Completo </th>
-    <td mat-cell *matCellDef="let alumno"> {{ alumno | nombreCompleto }} </td>
+    <td mat-cell *matCellDef="let alumno"> {{ alumno | studentsFullNamePipe }} </td>
   </ng-container>
 
   <!-- Editar -->

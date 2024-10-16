@@ -28,7 +28,7 @@ function iniciarSesion() {
       }).then(() => {
         habilitarDesconexion();
         // Redirigir a la página del administrador
-        window.location.href = 'dashboard.component.html';
+        window.location.href = './app/dashboard/dashboard.component.html';
       });
     } else if (nombreUsuario === "ALM" && contrasenia === "Pentahouse-ALM") {
       usuarioLogueado = { nombre: nombreUsuario, rol: 'alumno' };
@@ -41,7 +41,7 @@ function iniciarSesion() {
       }).then(() => {
         habilitarDesconexion();
         // Redirigir a la página del alumno
-        window.location.href = 'students.component.html';
+        window.location.href = 'app.component.html';
       });
     } else {
       Swal.fire({
@@ -78,7 +78,7 @@ function finalizarSesion() {
     title: '¿Querés cerrar sesión?',
     icon: 'warning',
     showCancelButton: true,
-    confirmButtonText: 'Sí, cerrar sesión',
+    confirmButtonText: 'Sí',
     cancelButtonText: 'No',
     background: '#1e1e1e',
     color: '#ffffff',
