@@ -10,8 +10,10 @@ export interface Alumno {
 
 @Component({
   selector: 'app-students',
+  standalone: true,
+  imports: [],
   templateUrl: './students.component.html',
-  styleUrls: ['./students.component.scss']
+  styleUrl: './students.component.scss'
 })
 export class StudentsComponent implements OnInit {
 

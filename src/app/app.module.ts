@@ -19,7 +19,6 @@ import { TopbarComponent } from './layout/topbar/topbar.component'; // Component
 import { StudentsFullName } from './shared/pipes/student-full-name.pipe'; // Pipe personalizado
 import { TitleSizeDirective } from './shared/directives/title-size.directive'; // Directiva personalizada
 
-
 @NgModule({
   declarations: [ // Declaraciones
     AppComponent,
