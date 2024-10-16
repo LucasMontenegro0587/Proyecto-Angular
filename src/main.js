@@ -141,7 +141,7 @@ function inscribirse(curso) {
   } else {
     Swal.fire({
       title: 'Acceso Denegado',
-      text: 'Debés iniciar sesión como Alumno/a para inscribirte a un curso.',
+      text: 'Iniciá sesión como Alumno/a.',
       icon: 'error',
       background: '#1e1e1e',
       color: '#ffffff',
