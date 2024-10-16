@@ -4,7 +4,7 @@ import { Directive } from '@angular/core';
   selector: '[apptitleSize]',
   standalone: true
 })
-export class titleSizeDirective {
+export class TitleSizeDirective {
 
   constructor() { }
 

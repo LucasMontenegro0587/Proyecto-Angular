@@ -13,7 +13,7 @@ export interface Alumno {
   templateUrl: './create-edit-students.component.html',
   styleUrls: ['./create-edit-students.component.scss']
 })
-export class studentsManager implements OnInit {
+export class StudentsManager implements OnInit {
 
   alumnoForm: FormGroup;
   alumnos: Alumno[] = [];

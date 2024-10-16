@@ -1,42 +1,22 @@
 <mat-toolbar color="primary">
   <span class="navbar-brand">Gestor del Alumnado (GedeA)</span>
 </mat-toolbar>
-
-<div class="container-fluid mt-3">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="content-area">
-        <router-outlet> <!-- Debo mejorar ésto, además, desde index.html se debe redirir acá para los alumnos -->
-          <button mat-button routerLink="/profile" routerLinkActive="active">Perfil</button>
-          <button mat-button routerLink="/courses" routerLinkActive="active">Cursos</button>
-          <button mat-button routerLink="/inscriptions" routerLinkActive="active">Inscripciones</button>        
-        </router-outlet>
-      </div>
+<link rel="stylesheet" href="/src/app/app.component.scss">
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened>
+    <app-sidebar>
+      <button mat-button routerLink="/inscriptions" routerLinkActive="active">Inscripciones</button>
+    </app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-topbar>
+      <button mat-button routerLink="/profile" routerLinkActive="active">Perfil</button>
+    </app-topbar>
+    <app-navbar>
+      <button mat-button routerLink="/courses" routerLinkActive="active">Cursos</button>
+    </app-navbar>
+    <div class="content-area">
+      <router-outlet></router-outlet>
     </div>
-  </div>
-</div>
-
-<style>
-  .navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: rgb(2, 2, 2);
-  }
-  .spacer {
-    flex: 1 1 auto; /* Empuja los botones hacia la derecha */
-  }
-  mat-toolbar button {
-    color: rgb(0, 0, 0);
-    font-weight: 500;
-  }
-  mat-toolbar button.active {
-    background-color: rgba(255, 255, 255, 0.2); /* Resaltar el botón activo */
-    border-radius: 4px; /* Bordes redondeados */
-  }
-  .content-area {
-    padding: 20px; /* Espaciado interno */
-    background-color: #000000; /* Fondo blanco para el área de contenido */
-    border-radius: 0.5rem; /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  }
-</style>
+  </mat-sidenav-content>
+</mat-sidenav-container>

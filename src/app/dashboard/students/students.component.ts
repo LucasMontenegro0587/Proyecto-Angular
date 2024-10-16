@@ -13,7 +13,7 @@ export interface Alumno {
   templateUrl: './students.component.html',
   styleUrls: ['./students.component.scss']
 })
-export class studentsComponent implements OnInit {
+export class StudentsComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'nombre', 'apellido', 'curso', 'acciones'];
   alumnos: Alumno[] = [];
