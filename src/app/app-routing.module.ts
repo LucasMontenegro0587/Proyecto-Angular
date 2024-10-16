@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import path from 'path';
 
 const routes: Routes = [
-  // ACÁ SE DEBE REDIRIGIR LOS PATH
-  path: '**';
-  redirectTo: '';
+  // ACÁ SE DEBE REDIRIGIR LOS .html
+  // path: '**';
+  // redirectTo: '';
 ];
 
 @NgModule({
