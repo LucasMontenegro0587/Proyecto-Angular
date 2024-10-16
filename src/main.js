@@ -28,7 +28,7 @@ function iniciarSesion() {
       }).then(() => {
         habilitarDesconexion();
         // Redirigir a la página del administrador
-        window.location.href = './app/dashboard/dashboard.component.html';
+        window.location.href = 'src/app/dashboard/dashboard.component.html';
       });
     } else if (nombreUsuario === "ALM" && contrasenia === "Pentahouse-ALM") {
       usuarioLogueado = { nombre: nombreUsuario, rol: 'alumno' };
@@ -41,7 +41,7 @@ function iniciarSesion() {
       }).then(() => {
         habilitarDesconexion();
         // Redirigir a la página del alumno
-        window.location.href = 'app.component.html';
+        window.location.href = 'src/app/app.component.html';
       });
     } else {
       Swal.fire({
