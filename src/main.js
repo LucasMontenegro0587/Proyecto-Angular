@@ -138,7 +138,7 @@ function iniciarSesion() {
       }).then(() => {
         habilitarDesconexion();
         // Redirigir a la página del administrador
-        window.location.href = 'src/app/dashboard/dashboard.component.html';
+        window.location.href = 'src/app/features/dashboard/dashboard.component.html';
       });
     } else if (nombreUsuario === "ALM" && contrasenia === "Pentahouse-ALM") {
       usuarioLogueado = { nombre: nombreUsuario, rol: 'alumno' };
