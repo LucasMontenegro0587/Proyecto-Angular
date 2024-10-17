@@ -22,9 +22,6 @@ import { TitleSizeDirective } from './shared/directives/title-size.directive'; /
 @NgModule({
   declarations: [ // Declaraciones
     AppComponent,
-    StudentsComponent,
-    StudentsFullName,
-    CreateEditStudents,
   ],
   imports: [ // Importaciones
     AppRoutingModule,
@@ -41,6 +38,9 @@ import { TitleSizeDirective } from './shared/directives/title-size.directive'; /
     NavbarComponent,
     SidebarComponent,
     TopbarComponent,
+    StudentsComponent,
+    CreateEditStudents,
+    StudentsFullName,
     TitleSizeDirective
   ],
   providers: [],
