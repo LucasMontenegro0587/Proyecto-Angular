@@ -43,6 +43,6 @@ import { TitleSizeDirective } from './shared/directives/title-size.directive'; /
     TitleSizeDirective
   ],
   providers: [],
-  bootstrap: [],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
