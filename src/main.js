@@ -1,5 +1,5 @@
-// Array de cursos
-const cursosDisponibles = [
+// Array de cursos separa en dos grupos
+const cursosDisponibles = cursos.slice(0, 8) = [
   {
     titulo: "Desarrollo Web",
     descripcion: "Conviértete en un desarrollador web completo aprendiendo HTML, CSS, JavaScript y más. Este curso abarca desde la estructura básica hasta la creación de sitios interactivos y responsivos.",
@@ -82,7 +82,7 @@ const cursosDisponibles = [
   }
 ];
 
-const cursosExclusivos = [
+const cursosExclusivos = cursos.slice(8, 10) = [
   {
     titulo: "Kitsunia",
     descripcion: "Explora Kitsunia, un entorno avanzado para el diseño frontend interactivo, optimizado para crear interfaces inmersivas.",
@@ -104,10 +104,6 @@ const cursosExclusivos = [
       }
     }
   ];
-
-// Separar los cursos en dos arrays
-const cursosDisponibles = cursos.slice(0, 8);
-const cursosExclusivos = cursos.slice(8, 10);
 
 console.log("Cursos disponibles:", cursosDisponibles);
 console.log("Cursos exclusivos:", cursosExclusivos);
