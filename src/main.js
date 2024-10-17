@@ -1,3 +1,118 @@
+// Array de cursos
+
+const cursosDisponibles = [
+  {
+    titulo: "Desarrollo Web",
+    descripcion: "Conviértete en un desarrollador web completo aprendiendo HTML, CSS, JavaScript y más. Este curso abarca desde la estructura básica hasta la creación de sitios interactivos y responsivos.",
+    cargaHoraria: "80 horas",
+    objetivos: "Crear sitios web completos y modernos, optimizados para cualquier dispositivo.",
+    niveles: {
+      basico: "Introducción a la creación de sitios web usando HTML y CSS.",
+      completo: "Creación de sitios web responsivos con interactividad avanzada utilizando JavaScript."
+    }
+  },
+  {
+    titulo: "Python",
+    descripcion: "Domina Python, uno de los lenguajes de programación más versátiles y populares. Este curso te llevará desde los fundamentos hasta el desarrollo de aplicaciones completas con Python.",
+    cargaHoraria: "50 horas",
+    objetivos: "Escribir código eficiente, manejar datos y desarrollar scripts para aplicaciones.",
+    niveles: {
+      basico: "Fundamentos de Python, estructuras de datos y control de flujo.",
+      completo: "Desarrollo de aplicaciones completas, incluyendo acceso a bases de datos y manejo de archivos."
+    }
+  },
+  {
+    titulo: "Angular",
+    descripcion: "Aprende a desarrollar aplicaciones web modernas utilizando Angular, un framework de desarrollo de aplicaciones front-end.",
+    cargaHoraria: "60 horas",
+    objetivos: "Dominar la creación de aplicaciones escalables y mantener un código limpio y estructurado.",
+    niveles: {
+      basico: "Fundamentos del framework y creación de componentes básicos.",
+      completo: "Integración de servicios y manejo avanzado de rutas y estados."
+    }
+  },
+  {
+    titulo: "CoffeeScript",
+    descripcion: "Descubre CoffeeScript, un lenguaje que compila en JavaScript pero ofrece una sintaxis más limpia y sencilla.",
+    cargaHoraria: "40 horas",
+    objetivos: "Mejorar el flujo de trabajo y escribir código más conciso y legible.",
+    niveles: {
+      basico: "Introducción a la sintaxis y características de CoffeeScript.",
+      completo: "Aplicar CoffeeScript en proyectos reales y más complejos."
+    }
+  },
+  {
+    titulo: "Nuxt.js",
+    descripcion: "Inicia en el desarrollo con Nuxt.js, un framework basado en Vue.js para la creación de aplicaciones web universales y sitios estáticos.",
+    cargaHoraria: "25 horas",
+    objetivos: "Aprender a desarrollar sitios web con server-side rendering y mejorar la experiencia del usuario.",
+    niveles: {
+      basico: "Fundamentos del framework Nuxt.js y configuración inicial.",
+      completo: "Desarrollo de aplicaciones universales con server-side rendering."
+    }
+  },
+  {
+    titulo: "C++",
+    descripcion: "Domina uno de los lenguajes más potentes para el desarrollo de software de alto rendimiento. C++ es fundamental para sistemas, videojuegos y aplicaciones de misión crítica.",
+    cargaHoraria: "80 horas",
+    objetivos: "Crear aplicaciones eficientes y de alto rendimiento.",
+    niveles: {
+      basico: "Fundamentos de C++, estructuras de control, y manejo de memoria.",
+      completo: "Programación avanzada con punteros, herencia y manejo de excepciones."
+    }
+  },
+  {
+    titulo: "Django",
+    descripcion: "Desarrolla aplicaciones web robustas y seguras usando Django, uno de los frameworks más populares de Python. Aprende a crear sitios web rápidamente con funciones avanzadas.",
+    cargaHoraria: "70 horas",
+    objetivos: "Desarrollar aplicaciones web completas usando Django y Python.",
+    niveles: {
+      basico: "Fundamentos del framework, creación de vistas y plantillas.",
+      completo: "Integración de bases de datos, autenticación y despliegue en servidores."
+    }
+  },
+  {
+    titulo: "Tailwind CSS",
+    descripcion: "Aprende a diseñar interfaces modernas y eficientes usando Tailwind CSS, un framework de CSS basado en utilidades. Ideal para construir rápidamente sitios web bonitos y funcionales.",
+    cargaHoraria: "30 horas",
+    objetivos: "Crear sitios web estilizados y totalmente personalizables usando clases de utilidad.",
+    niveles: {
+      basico: "Fundamentos de Tailwind CSS y su estructura de clases.",
+      completo: "Personalización avanzada, creación de temas y optimización de rendimiento."
+    }
+  }
+];
+
+const cursosExclusivos = [
+  {
+    titulo: "Kitsunia",
+    descripcion: "Explora Kitsunia, un entorno avanzado para el diseño frontend interactivo, optimizado para crear interfaces inmersivas.",
+    cargaHoraria: "50 horas",
+    objetivos: "Desarrollar sitios web altamente interactivos, centrados en la experiencia de usuario fluida y envolvente.",
+    niveles: {
+      basico: "Creación de interfaces sencillas.",
+      completo: "Desarrollo de experiencias complejas con animaciones y optimización avanzada."
+    }
+  },
+    {
+      titulo: "Valquirium",
+      descripcion: "Sumérgete en Valquirium, una herramienta innovadora para construir plataformas de front-end avanzadas con una eficiencia sin precedentes.",
+      cargaHoraria: "50 horas",
+      objetivos: "Dominar la creación de aplicaciones web dinámicas y ágiles con patrones de diseño de última generación.",
+      niveles: {
+        basico: "Implementación de componentes y diseño responsive.",
+        completo: "Optimización de rendimiento y experiencias web interactivas complejas."
+      }
+    }
+  ];
+
+// Separar los cursos en dos arrays
+const cursosDisponibles = cursos.slice(0, 8);
+const cursosExclusivos = cursos.slice(8, 10);
+
+console.log("Cursos disponibles:", cursosDisponibles);
+console.log("Cursos exclusivos:", cursosExclusivos);
+
 // Variable para almacenar el estado del usuario logueado
 let usuarioLogueado = null;
 
