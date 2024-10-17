@@ -21,7 +21,6 @@ import { TitleSizeDirective } from './shared/directives/title-size.directive'; /
 
 @NgModule({
   declarations: [ // Declaraciones
-    AppComponent,
   ],
   imports: [ // Importaciones
     AppRoutingModule,

@@ -6,7 +6,7 @@ import { NgIf } from '@angular/common'; // Asegurando NgIf en caso de condiciona
 
 @Component({
   selector: 'app-root',
-  standalone: false,
+  standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
