@@ -1,5 +1,4 @@
 // Array de cursos
-
 const cursosDisponibles = [
   {
     titulo: "Desarrollo Web",
