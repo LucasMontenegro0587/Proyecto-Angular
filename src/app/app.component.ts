@@ -6,8 +6,7 @@ import { NgIf } from '@angular/common'; // Asegurando NgIf en caso de condiciona
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, MatToolbarModule, MatListModule, NgIf], // Importaciones aseguradas
+  standalone: false,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
